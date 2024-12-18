@@ -17,8 +17,8 @@ for tb in tbNames[1:]:
 df.columns = tbNames
 
 # compute returns
-rets = df.pct_change().dropna()
-cumrets = (1 + df.pct_change()).cumprod()
+rets = df.pct_change(fill_method=None).dropna()
+cumrets = (1 + df.pct_change(fill_method=None)).cumprod()
 cumrets.iloc[0] = 1.
 
 
