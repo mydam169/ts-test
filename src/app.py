@@ -50,7 +50,7 @@ app.layout = html.Div([
         dcc.Dropdown(
             id='multi-asset-dropdown',
             options=[{'label': i, 'value': i} for i in df.columns],
-            value=[df.columns[0]],
+            value=tbNames[:2],
             multi=True
         )
     ], style={'width': '48%', 'display': 'inline-block'}),
